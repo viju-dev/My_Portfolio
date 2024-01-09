@@ -1,0 +1,493 @@
+/* Add these styles to your CSS file */
+
+body, h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f8f8;
+}
+
+nav {
+    text-align: center;
+    margin-top: 20px;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #3498db;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+header {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    text-align: center;
+    padding: 50px 0;
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin: 0;
+    color: #3498db;
+}
+
+header p {
+    font-size: 1.2em;
+    margin-top: 5px;
+    color: #ecf0f1;
+}
+
+section {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 40px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+section h2::after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: #3498db;
+    margin: 10px 0;
+}
+
+section h2 {
+    color: #2c3e50;
+}
+.project{
+    /* custom */
+    margin-top: 20px;
+}
+.project .description{
+    margin-top: 5px;
+    /* width: 300px; Set a fixed width or adjust as needed */
+    max-height: 5em; /* Maximum height before ellipsis */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal; /* Allow multiple lines */
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* Number of lines to show before ellipsis */
+    -webkit-box-orient: vertical;
+}
+.project img {
+    max-width: 100%; /* Make project images responsive */
+    margin-top: 15px;
+    /* margin-bottom: 5px; */
+}
+
+#education, #achievements, #experience {
+    margin-top: 40px;
+}
+
+#education h2, #achievements h2, #experience h2 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+#education p, #achievements ul, #experience h3, #experience p {
+    margin-bottom: 15px;
+}
+
+#achievements ul {
+    list-style: disc;
+    padding-left: 20px;
+}
+
+#experience h3 {
+    color: #3498db;
+}
+
+#counters {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.counter {
+    display: inline-block;
+    margin: 0 30px;
+}
+
+.counter h3 {
+    color: #2c3e50;
+}
+
+.count {
+    font-size: 2em;
+    color: #3498db;
+}
+
+#languages {
+    margin-top: 40px;
+}
+
+#languages ul {
+    list-style: none;
+}
+
+#languages li {
+    margin-bottom: 10px;
+}
+
+#clients {
+    margin-top: 40px;
+}
+
+.client-logo {
+    display: inline-block;
+    margin: 0 20px;
+}
+
+.client-logo img {
+    max-width: 100px;
+    max-height: 50px;
+}
+
+#responsive {
+    margin-top: 40px;
+}
+
+#social {
+    margin-top: 40px;
+}
+
+#social ul {
+    list-style: none;
+}
+
+#social li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+#social a {
+    text-decoration: none;
+    color: #3498db;
+}
+
+#cta {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #2980b9;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #2c3e50;
+    color: #ecf0f1;
+}
+/* Add any necessary styles for the subsections here */
+
+#about h3 {
+    color: #2c3e50;
+    margin-top: 40px;
+}
+
+#about ul {
+    list-style: disc;
+    padding-left: 20px;
+}
+
+
+@media screen and (max-width: 900px) {
+    nav,section, nav ul{
+      margin-left:20px;
+      margin-right:20px;
+    }
+
+   
+}
+
+
+
+
+/* Add styles for the responsive navigation */
+
+/* Hamburger menu styles */
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    width: 30px;
+    height: 3px;
+    background-color: #333;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+/* Cross icon styles */
+.open .bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.open .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.open .bar:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* Additional styles for cross icon */
+.bar-cross {
+    background-color: #fff; /* Change the background color to white or your desired color */
+}
+
+.open .bar-cross:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.open .bar-cross:nth-child(2) {
+    opacity: 0;
+}
+
+.open .bar-cross:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* Media query for small screens */
+@media screen and (max-width: 768px) {
+    .main-nav ul {
+        display: none;
+        padding:0;
+        
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .main-nav.open ul {
+        display: block;
+    }
+
+    .main-nav li {
+        display: block;
+        margin-bottom: 10px;
+    }
+}
+
+
+/* additional styles for the Resume section */
+#resume {
+    margin-top: 40px;
+}
+
+#resume a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+#resume a:hover {
+    background-color: #2980b9;
+}
+/* styles for the skill items */
+#skills {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.skills-icons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.skill-item {
+    text-align: center;
+    margin: 10px;
+}
+
+.skills-icons i {
+    font-size: 36px;
+    color: #3498db;
+    margin-bottom: 10px;
+}
+
+.skills-icons span {
+    display: block;
+    font-size: 16px;
+    color: #333;
+}
+
+#github, #blog, #contact, #resume {
+    text-align: center;
+}
+
+
+/* project gallery */
+.gallery {
+    display: flex;
+    overflow-x: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #3498db transparent;
+}
+
+.gallery img {
+    max-width: 100%;
+    height: auto;
+    margin-right: 10px;
+    border-radius: 8px;
+}
+
+.gallery::-webkit-scrollbar {
+    width: 12px;
+}
+
+.gallery::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+.gallery::-webkit-scrollbar-thumb {
+    background-color: #3498db;
+    border-radius: 10px;
+}
+
+
+
+#contact {
+    background-color: #fff; 
+    padding: 40px;
+    text-align: center;
+    margin-top: 40px; 
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+#contact h2 {
+    /* font-size: 2em; */
+    margin-bottom: 20px;
+    color: #2c3e50; 
+}
+
+#contact p {
+    font-size: 1em;
+    /* color: #555; */
+    margin: 10px 0;
+    text-align: center; 
+}
+
+
+#contact a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+#contact a:hover {
+    text-decoration: underline;
+}
+
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+
+#contact-form p {
+    font-size: 1.1em; 
+    color: #555;
+    margin-bottom: 10px;
+    text-align: center; 
+}
+
+#contact-form label {
+    display: block;
+    font-size: 1.2em;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+#contact-form input{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 1em;
+}
+#contact-form textarea {
+    width: 100%;
+    max-width: 100%; /* max-width to 100% for responsiveness */
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 1em;
+    overflow: auto; /* overflow for scrolling if needed */
+}
+
+#contact-form button {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    /* margin-top: 10px; */
+    font-size: 1.2em;
+}
+
+
+#contact-form button:hover {
+    background-color: #258cd1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
