@@ -359,15 +359,21 @@ footer {
 /* project gallery */
 .gallery {
     display: flex;
+/*     
+    overflow:hidden;
+    border-radius: 8px;
+
     overflow-x: auto;
     scrollbar-width: thin;
-    scrollbar-color: #3498db transparent;
+    scrollbar-color: #3498db transparent; 
+    */
 }
 
 .gallery img {
     max-width: 100%;
     height: auto;
     margin-right: 10px;
+/*     margin:auto */
     border-radius: 8px;
 }
 
