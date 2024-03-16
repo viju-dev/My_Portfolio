@@ -1,14 +1,15 @@
 //image slider functionality
 
 document.addEventListener("DOMContentLoaded", function () {
-    // Get all galleries
+    // getting  galleries
     var galleries = document.querySelectorAll('.gallery');
 
-    // Iterate over each gallery and add the slider functionality
+    // iterating over each gallery and add the slider functionality
     galleries.forEach(function (gallery) {
         var currentIndex = 0;
+        var intervalId; // To store the interval ID
 
-        // Get all images in the gallery
+        // getting all images in the gallery
         var images = gallery.querySelectorAll('img');
 
         // Function to show the current image
@@ -22,18 +23,31 @@ document.addEventListener("DOMContentLoaded", function () {
             });
         }
 
-        // Showing the initial image
-        showImage(currentIndex);
+        // Function to start the slideshow
+        function startSlideshow() {
+            intervalId = setInterval(function () {
+                currentIndex = (currentIndex + 1) % images.length;
+                showImage(currentIndex);
+            }, 2000);
+        }
 
-        // Event listener for onClick
-        gallery.addEventListener('click', function () {
-            currentIndex = (currentIndex + 1) % images.length;
-            showImage(currentIndex);
+        // Showing the initial image and starting the slideshow
+        showImage(currentIndex);
+        startSlideshow();
+
+        // Event listener for hover
+        gallery.addEventListener('mouseenter', function () {
+            clearInterval(intervalId); // Stop the slideshow when hovering
         });
 
-        
+        // Event listener for mouseout
+        gallery.addEventListener('mouseleave', function () {
+            startSlideshow(); // Restart the slideshow when mouse leaves
+        });
+
     });
 });
+
 
 
 //toggle the menu and change the icon functionality
