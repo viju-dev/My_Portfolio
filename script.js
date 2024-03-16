@@ -44,6 +44,17 @@ document.addEventListener("DOMContentLoaded", function () {
         gallery.addEventListener('mouseleave', function () {
             startSlideshow(); // Restart the slideshow when mouse leaves
         });
+        // added zoom effect on hover for each image
+        images.forEach(function (image) {
+            image.addEventListener('mouseenter', function () {
+                image.style.transform = 'scale(1.025)'; 
+                image.style.transition = 'transform 0.3s ease'; // added transition effect
+            });
+
+            image.addEventListener('mouseleave', function () {
+                image.style.transform = 'scale(1)'; // reverting back to original size
+            });
+        });
 
     });
 });
